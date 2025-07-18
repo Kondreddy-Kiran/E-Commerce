@@ -29,3 +29,222 @@
 @import url(pages/single-product.css);
 @import url(pages/blog.css);
 @import url(pages/single-blog.css);
+
+.category-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.category-item {
+  flex: 0 0 25%;
+  max-width: 25%;
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.category-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+@media (max-width: 991.98px) {
+  .category-item {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .category-item {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .category-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+.category-products-section {
+  padding: 60px 0;
+  display: none;
+}
+
+.category-products-section .section-title {
+  margin-bottom: 40px;
+  text-align: center;
+  position: relative;
+}
+
+.category-products-section .section-title h2 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.category-products-section .section-title p {
+  font-size: 1.1em;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.category-products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.category-products-grid .product-item {
+  border: 1px solid #eee;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.category-products-grid .product-item:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.category-products-grid .product-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 15px;
+  transform: none;
+  transition: none;
+}
+
+.category-products-grid .product-title {
+  font-size: 1.1em;
+  font-weight: 600;
+  margin-bottom: 10px;
+  display: block;
+  color: #333;
+  text-decoration: none;
+}
+
+.category-products-grid .product-star {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 10px 0;
+  color: gold;
+  display: flex;
+  justify-content: center;
+}
+
+.category-products-grid .product-star li {
+  margin: 0 2px;
+}
+
+.category-products-grid .product-prices {
+  margin-bottom: 15px;
+}
+
+.category-products-grid .new-price {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #e74c3c;
+  margin-right: 10px;
+}
+
+.category-products-grid .old-price {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.category-products-grid .product-discount {
+  background-color: #2ecc71;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 3px;
+  font-size: 0.8em;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.category-products-grid .product-links {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.category-products-grid .product-links button,
+.category-products-grid .product-links a {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  color: #555;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.category-products-grid .product-links button:hover,
+.category-products-grid .product-links a:hover {
+  background-color: #333;
+  color: white;
+  border-color: #333;
+}
+
+.back-to-categories-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.back-to-categories-btn:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 1200px) {
+  .category-products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 991.98px) {
+  .category-products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 575.98px) {
+  .category-products-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.product-image .img1,
+.product-image .img2 {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.product-item:hover .product-image .img1 {
+  opacity: 1;
+  transform: none;
+}
+
+.product-item:hover .product-image .img2 {
+  opacity: 0;
+  transform: none;
+}
