@@ -6,6 +6,3 @@ Hi, this project is a fully responsive e-commerce website project made only HTML
 No framework or library (except glide.js) was used throughout the project.
 
 
-You can reach the live link of the project from the link below.
-
-Link : https://kondreddy-kiran.github.io/E_Commerce/
